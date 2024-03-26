@@ -1,12 +1,12 @@
 baseURL = "https://example.org/"
 languageCode = "en-us"
 title = "Personal Digital Garden"
-theme = "digital-garden-hugo-theme"
+theme = "hugo-theme-stack"
 
 googleAnalytics = "UA-PROPERTY_ID"
 
 [Params]
-  description = "My Digital Garden on the Internet"
+  description = "Fan's Digital Garden on the Internet"
   images = ['/digital-garden-logo.png']
   enableSearch = true
 
