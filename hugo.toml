@@ -11,7 +11,7 @@ googleAnalytics = "UA-PROPERTY_ID"
   enableSearch = true
 
 [Params.newsletter]
-  title = ""
+  title = "Digital Garden Blog Site"
   description = "A curated weekly digest once a week to your mailbox"
 
   # Supports buttondown, substack and revue
