@@ -1,99 +1,73 @@
-baseURL = "https://example.org/"
-languageCode = "en-us"
-title = "Personal Digital Garden"
-theme = "hugo-theme-stack"
+DefaultContentLanguage = "en"
+author = "He Yeshuang"
+baseURL = "https://example.com/"
+copyright = "Copyright © 2008–2019"
+disqusShortname = "YOURSHORTNAME"
+enableInlineShortcodes = true
+footnoteReturnLinkContents = "^"
+googleAnalytics = "UA-FAKE" ## or "G-xxxxxxxx" in Google Analytics v4, in hugo v0.82+
+hasCJKLanguage = true
+languageCode = "cn"
+theme = "hugo-theme-tokiwa"
+title = "Hugo Themes"
 
-googleAnalytics = "UA-PROPERTY_ID"
+[markup]
+[markup.highlight]
+style = "monokailight"
 
-[Params]
-  description = "Fan's Digital Garden on the Internet"
-  images = ['/digital-garden-logo.png']
-  enableSearch = true
+[markup.goldmark.renderer]
+unsafe = true
 
-[Params.newsletter]
-  title = "Digital Garden Blog Site"
-  description = "A curated weekly digest once a week to your mailbox"
-
-  # Supports buttondown, substack and revue
-  provider = "buttondown"
-
-  # Buttondown - URL from share page; Refer: https://blog.buttondown.email/2019/10/11/adding-a-buttondown-subscription-form-to-webflow#getting-your-subscription-url
-  # Substack - URL of the newsletter homepage; Example: https://on.substack.com/
-  # Revue - Username
-  path = "https://buttondown.email/api/emails/embed-subscribe/"
+[params]
+bannerFont = "fonts/exampleFont" 
+description = """
+Tokiwa-iro is the theme color of this site.
+""" 
+env = "production" # for Google Analytics and DISQUS.
+favicon = "img/favicon-32x32.png" 
+fuse = true # for searchbox. "JSON" must added to output contents. See [outputs].
+math = true # for introducing $KaTeX$
+useChineseFonts = true 
+postDateFormat = "2006-1-2"
 
 [menu]
+# Shown in the side menu.
 [[menu.main]]
-  name = 'Home'
-  url = '/'
-  weight = 1
+identifier = "post"
+name = "Posts"
+url = "/post/"
+weight = 1
 [[menu.main]]
-  name = 'Content'
-  params.header = true
-  weight = 2
-[[menu.main]]
-  name = 'Articles'
-  url = '/articles'
-  weight = 3
-[[menu.main]]
-  name = 'Portfolio'
-  url = '/portfolio'
-  weight = 4
-[[menu.main]]
-  name = 'Stack'
-  url = '/stack'
-  weight = 5
-[[menu.main]]
-  name = 'Links'
-  params.header = true
-  weight = 6
-[[menu.main]]
-  name = 'Polywork'
-  url = 'https://polywork.com'
-  weight = 7
+name = "Tags"
+url = "/tags/"
+weight = 2
 
-[[menu.social]]
-  name = 'Twitter'
-  url = 'https://twitter.com'
-  weight = 1
-[[menu.social]]
-  name = 'GitHub'
-  url = 'https://github.com'
-  weight = 2
-[[menu.social]]
-  name = 'LinkedIn'
-  url = 'https://linkedin.com'
-  weight = 3
-[[menu.social]]
-  name = 'Instagram'
-  url = 'https://instagram.com'
-  weight = 4
-[[menu.social]]
-  name = 'Dribbble'
-  url = 'https://dribbble.com'
-  weight = 5
-[[menu.social]]
-  name = 'Codepen'
-  url = 'https://codepen.io'
-  weight = 6
-[[menu.social]]
-  name = 'Twitch'
-  url = 'https://twitch.com'
-  weight = 7
-[[menu.social]]
-  name = 'Email'
-  url = 'mailto:user@example.org'
-  weight = 8
-[[menu.social]]
-  name = 'RSS'
-  url = '/articles/index.xml'
-  weight = 9
+[[menu.main]]
+name = "Categories"
+url = "/categories/"
+weight = 2
 
+[[menu.main]]
+identifier = "about"
+name = "About"
+url = "/about/"
+weight = 3
 
-# syntax highlight settings
-[markup]
-  [markup.highlight]
-    style = "dracula"
-  [markup.goldmark.renderer]
-    # Enable to include inline HTML
-    unsafe = true
+[taxonomies]
+category = "categories"
+series = "series"
+tag = "tags"
+[social]
+bilibili = "http://example.com/"
+github = "https://github.com/"
+gitlab = "https://gitlab.com/"
+instagram = "http://example.com/"
+mail = "mailto:anon@example.com"
+twitter = "https://twitter.com/"
+weibo = "http://example.com/"
+youtube = "https://youtube.com/"
+zhihu = "http://example.com/"
+# any icon in layouts/partials/svg can be used by the name without the "-line.svg"
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
